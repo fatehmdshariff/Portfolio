@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Bilingual Sentiment Analyzer",
+    "description": "Large-scale English–Arabic sentiment classifier trained on over 500,000 text samples using TF-IDF vectorization with Logistic Regression and Multinomial Naive Bayes. Includes preprocessing, evaluation metrics, and a Streamlit-based demo for real-time sentiment prediction.",
+    "highlights": [
+      "500,000+ bilingual text samples (English & Arabic)",
+      "TF-IDF + Logistic Regression / Naive Bayes pipeline",
+      "High accuracy & F1-score with fast Streamlit inference"
+    ],
+    "live": "https://your-live-demo-url",
+    "github": "https://github.com/fatehmdshariff/senti"
+  },
+  {
+    "title": "Energy Load Forecasting Dashboard",
+    "description": "Real-time energy demand forecasting dashboard using U.S. EIA API data. Implements Random Forest model with lag and rolling features, automated weekly retraining, and live visualization via Streamlit and Flask integration.",
+    "highlights": [
+      "Random Forest baseline with engineered time-series features",
+      "Automated weekly retraining via Windows Scheduler",
+      "Streamlit visualization + Flask backend for live EIA data"
+    ],
+    "live": "https://your-live-demo-url",
+    "github": "https://github.com/fatehmdshariff/energy"
+  },
+  {
+    "title": "GenAI + RAG PDF Buddy",
+    "description": "LLM-powered document analysis assistant using Gemini API and RAG architecture. Processes lab reports, diagnostic summaries, and prescriptions via PDF upload, generating cited and context-aware answers using embeddings and vector search.",
+    "highlights": [
+      "Embeddings + cosine similarity with FAISS/Chroma vector DB",
+      "Gemini API for retrieval-augmented generation (RAG)",
+      "Supports lab, diagnostic, and prescription document formats"
+    ],
+    "live": "https://your-live-demo-url",
+    "github": "https://github.com/fatehmdshariff/LLM_RAG"
+  }
+]

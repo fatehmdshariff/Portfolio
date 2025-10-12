@@ -31,91 +31,39 @@ body {
   color: var(--text);
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.6;
-
-  /* Prevent hero from hiding behind navbar on mobile */
-  padding-top: calc(70px + env(safe-area-inset-top));
 }
 
 .container { width: min(1100px, 92vw); margin: 0 auto; }
 
 /* ---------------- Header ---------------- */
 .site-header {
-  position: fixed; /* changed from sticky */
-  top: 0;
-  left: 0;
-  width: 100%;
-  backdrop-filter: saturate(180%) blur(10px);
-  background: var(--panel); /* solid background for visibility */
+  position: sticky; top: 0; backdrop-filter: saturate(180%) blur(10px);
+  background: linear-gradient(to bottom, rgba(15,18,33,.9), rgba(15,18,33,.6));
   border-bottom: 1px solid var(--border);
-  z-index: 1000;
-
-  /* Safe area padding for iPhones */
-  padding-top: env(safe-area-inset-top);
-  padding-bottom: 0.5rem;
+  z-index: 10;
 }
-
-.light .site-header {
-  background: var(--panel);
-}
+.light .site-header { background: linear-gradient(to bottom, rgba(247,248,252,.9), rgba(247,248,252,.6)); }
 
 .nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.8rem 1rem;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: .8rem 0;
 }
-
-.nav-links {
-  display: flex;
-  gap: 1rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav a {
-  color: var(--text);
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.25s ease;
-}
-
-.nav a:hover {
-  color: var(--accent);
-}
+.nav-links { display: flex; gap: 1rem; list-style: none; margin: 0; padding: 0; }
+.nav a { color: var(--text); text-decoration: none; font-weight: 600; }
+.nav a:hover { color: var(--accent); }
 
 .theme-toggle {
-  background: transparent;
-  border: 1px solid var(--border);
-  color: var(--text);
-  border-radius: 10px;
-  padding: 0.4rem 0.6rem;
-  cursor: pointer;
-}
-
-/* Mobile safe area background */
-@media (max-width: 600px) {
-  .site-header {
-    background: var(--panel);
-    padding-top: calc(env(safe-area-inset-top) + 0.5rem);
-  }
+  background: transparent; border: 1px solid var(--border); color: var(--text);
+  border-radius: 10px; padding: .4rem .6rem; cursor: pointer;
 }
 
 /* ---------------- Hero ---------------- */
 .hero {
-  display: grid;
-  grid-template-columns: 1.1fr .9fr;
-  gap: 2rem;
-  align-items: center;
+  display: grid; grid-template-columns: 1.1fr .9fr; gap: 2rem; align-items: center;
   padding: 4rem 0 2rem;
 }
 .hero h1 { font-size: clamp(2rem, 3.8vw, 3rem); line-height: 1.2; }
-.accent {
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
+.accent { background: linear-gradient(135deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .hero-cta { display: flex; gap: .8rem; margin-top: 1rem; }
 .hero-art { position: relative; min-height: 260px; }
 .blob {
@@ -153,8 +101,12 @@ body {
 }
 
 /* ---------------- Skills Card (Compact) ---------------- */
-.skills-card { padding: 0.8rem 1rem; }
-.skills-card h3 { margin-bottom: 0.3rem; }
+.skills-card {
+  padding: 0.8rem 1rem;
+}
+.skills-card h3 {
+  margin-bottom: 0.3rem;
+}
 .skills-card h4 {
   font-size: 0.85rem;
   color: var(--accent-2);
@@ -175,7 +127,9 @@ body {
 .skills-grid div { margin: 0; padding: 0; }
 
 /* ---------------- CONTACT SECTION (With Hover Animation) ---------------- */
-#contact { color: #ffffff; }
+#contact {
+  color: #ffffff;
+}
 
 #contact .contact-grid {
   display: grid;
@@ -200,13 +154,19 @@ body {
   display: grid;
   gap: 0.25rem;
 }
-#contact .contact-list li { color: #ffffff; }
+
+#contact .contact-list li {
+  color: #ffffff;
+}
+
 #contact .contact-list a {
   color: #ffffff;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.25s ease, transform 0.25s ease;
 }
+
+/* Hover: change color + slight slide */
 #contact .contact-list a:hover {
   color: var(--accent-2);
   transform: translateX(4px);
@@ -221,6 +181,7 @@ body {
   gap: 1rem;
   margin-top: 1.2rem;
 }
+
 .btn.ghost.contact-btn {
   border: 1.5px solid rgba(255, 255, 255, 0.25);
   color: #ffffff;
@@ -231,6 +192,7 @@ body {
   text-decoration: none;
   transition: all 0.25s ease;
 }
+
 .btn.ghost.contact-btn:hover {
   color: var(--accent-2);
   border-color: var(--accent-2);
@@ -244,6 +206,7 @@ body {
   font-weight: 600;
   margin: 0.4rem 0 0.2rem;
 }
+
 #contact input,
 #contact textarea {
   width: 100%;
@@ -253,6 +216,7 @@ body {
   background: var(--panel);
   color: var(--text);
 }
+
 #contact input:focus,
 #contact textarea:focus {
   outline: 2px solid var(--accent-2);
@@ -271,6 +235,7 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
 #contact button[type="submit"]:hover {
   filter: brightness(1.05);
   transform: translateY(-2px);

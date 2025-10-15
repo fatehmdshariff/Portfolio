@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <header class="site-header" id="top">
     <nav class="nav container">
@@ -72,7 +73,6 @@
           <p>BE in Artificial Intelligence & Machine Learning — CMRIT, Bangalore</p>
         </article>
 
-        <!-- Updated Skills Section -->
         <article class="card skills-card">
           <h3>Skills</h3>
           <div class="skills-grid">
@@ -99,7 +99,73 @@
 
     <section id="projects" class="section container" aria-labelledby="projects-title">
       <h2 id="projects-title">Projects</h2>
-      <div id="projectGrid" class="grid"></div>
+
+      <div class="grid">
+
+        <article class="card project-card">
+          <h3>Bilingual Sentiment Analyzer</h3>
+          <p>English + Arabic sentiment classifier using TF-IDF with Logistic Regression and Naive Bayes. Features clean preprocessing, fast inference, and a Streamlit demo.</p>
+          <ul class="project-highlights">
+            <li>💬 480k+ English & 66k+ Arabic samples</li>
+            <li>⚡ TF-IDF + Logistic Regression / Naive Bayes</li>
+            <li>🧩 Streamlit-based web demo</li>
+          </ul>
+          <div class="project-links">
+            <a class="btn primary" href="https://github.com/fatehmdshariff/senti" target="_blank">GitHub Repo</a>
+            <a class="btn" href="https://your-live-demo-url" target="_blank">Live Demo</a>
+          </div>
+        </article>
+
+        <article class="card project-card">
+          <h3>Energy Load Forecasting Dashboard</h3>
+          <p>Real-time dashboard using EIA API data for forecasting energy consumption with Random Forest, auto weekly retraining, and visualization.</p>
+          <ul class="project-highlights">
+            <li>📈 Random Forest baseline</li>
+            <li>🔄 Auto retrains weekly via script</li>
+            <li>🧩 Streamlit + Flask API + EIA API</li>
+          </ul>
+          <div class="project-links">
+            <a class="btn primary" href="https://github.com/fatehmdshariff/energy" target="_blank">GitHub Repo</a>
+            <a class="btn" href="https://your-live-demo-url" target="_blank">Live Demo</a>
+          </div>
+        </article>
+
+        <article class="card project-card">
+          <h3>GenAI + RAG PDF Buddy</h3>
+          <p>Upload PDFs and chat with your documents using a custom RAG pipeline powered by Gemini API and FAISS embeddings.</p>
+          <ul class="project-highlights">
+            <li>📚 Supports multi-document ingestion</li>
+            <li>🧠 Uses Gemini + FAISS for retrieval</li>
+            <li>💻 Streamlit-based chatbot interface</li>
+          </ul>
+          <div class="project-links">
+            <a class="btn primary" href="https://github.com/fatehmdshariff/LLM_RAG" target="_blank">GitHub Repo</a>
+            <a class="btn" href="https://your-live-demo-url" target="_blank">Live Demo</a>
+          </div>
+        </article>
+
+        <!-- 🩺 Chest X-Ray Pneumonia Detector -->
+<article class="card project-card">
+  <h3>Chest X-Ray Pneumonia Detector (CNN)</h3>
+  <p>
+    An AI-powered web app that detects <strong>Pneumonia</strong> from chest X-ray images using a
+    <strong>Convolutional Neural Network (CNN)</strong> built with TensorFlow and Keras, wrapped in an interactive
+    Streamlit interface for easy image uploads and predictions.
+  </p>
+  <ul class="project-highlights">
+    <li>📊 Accuracy: 81% (Test Set), ROC-AUC ≈ 0.95</li>
+    <li>🧠 Trained on Kaggle “Chest X-Ray Images (Pneumonia)” dataset (~5.8k images)</li>
+    <li>💻 Built with TensorFlow · Keras · OpenCV · Streamlit</li>
+    <li>⚙️ Future addition: Grad-CAM explainability</li>
+  </ul>
+  <div class="project-links">
+    <a class="btn primary" href="https://github.com/fatehmdshariff/Pneumonia_Detector" target="_blank" rel="noopener">GitHub Repo</a>
+    <a class="btn" href="https://pneumonia-ai.streamlit.app" target="_blank" rel="noopener">Live Demo</a>
+  </div>
+</article>
+
+
+      </div>
     </section>
 
     <section id="contact" class="section container" aria-labelledby="contact-title">

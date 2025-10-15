@@ -86,37 +86,32 @@ body {
   align-items: stretch;
 }
 
+/* ---------------- Default Grid (for Resume, Contact, etc.) ---------------- */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1rem;
 }
 
-.card {
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 1rem;
-  box-shadow: var(--shadow);
-}
-
-/* ---------------- PROJECTS SECTION (3-column layout only here) ---------------- */
+/* ---------------- PROJECTS SECTION (Force max 3 columns) ---------------- */
 #projects .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr) !important;
   gap: 1.5rem;
+  justify-content: center;
   align-items: stretch;
+  max-width: 100%;
 }
 
 @media (max-width: 1024px) {
   #projects .grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
 @media (max-width: 640px) {
   #projects .grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 }
 
@@ -125,11 +120,20 @@ body {
   flex-direction: column;
   justify-content: space-between;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 300px;
 }
 
 #projects .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: var(--shadow);
 }
 
 /* ---------------- Skills Card (Compact) ---------------- */
